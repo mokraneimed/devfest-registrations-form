@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: productSansRegular ; 
+  src: url(./fonts/ProductSansRegular.ttf);
+}
+*{
+  font-family: productSansRegular;
+}
+
+  body{
+    @apply bg-devfest-black text-devfest-white overflow-x-hidden scroll-smooth;
+  }
+
+  .loadingLogo{
+    animation: lodingAnimation 5s;
+  }
+  .logInButton{
+    animation: loginAnimation 5s;
+  }
+
+  .questionTitle{
+    animation: texInputAnimation 0.5s;
+  }
+  .textInput{
+    animation: texInputAnimation 1s;
+  }
+  .nextButton{
+    animation: texInputAnimation 0.3s;
+  }
+
+  .options:nth-child(1){
+    animation: optionsAnim 0.6s;
+  }
+  .options:nth-child(2){
+    animation: optionsAnim 0.8s;
+  }
+  .options:nth-child(3){
+    animation: optionsAnim 1s;
+  }
+  .options:nth-child(4){
+    animation: optionsAnim 1.2s;
+  }
+  .options:nth-child(5){
+    animation: optionsAnim 1.4s;
+  }
+
+
+  @keyframes texInputAnimation {
+    0%{
+        margin-right: -400px;
+   
+    }
+    100%{
+      margin-right: 0px;
+    }
+  }
+
+  @keyframes optionsAnim {
+    0%{
+        margin-left: 400px;
+    }
+    100%{
+      margin-top: 0px;
+    }
+  }
+  @keyframes lodingAnimation{
+    0%{
+      opacity: 100%;
+    }
+    25%{
+      opacity: 0%;
+    }
+    50%{
+      opacity : 100%
+    }
+    75%{
+      opacity: 0%;
+    }
+    100%{
+      opacity : 100%; 
+    }
+  }
+  @keyframes loginAnimation{
+    0%{
+      opacity: 0%;
+    }
+    25%{
+      opacity: 0%;
+    }
+    50%{
+      opacity : 0%
+    }
+    75%{
+      opacity: 0%;
+    }
+    100%{
+      opacity : 100%; 
+    }
+  }
